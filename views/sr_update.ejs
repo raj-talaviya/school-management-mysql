@@ -1,0 +1,64 @@
+<style>
+    h1{
+        text-align: center;
+    }
+</style>
+<h1>Student Result Update</h1><br>
+<% result.forEach(function(demo){ %>
+    <form method="post">
+        <table align="center" border="1">
+            <tr>
+                <td>Name</td>
+                <td><input type="text" name="name" value="<%= demo.name%>"></td>
+            </tr>
+            <tr>
+                <td>Std</td>
+                <td><input type="text" name="std" value="<%= demo.std%>"></td>
+            </tr>
+            <tr>
+                <td>Div</td>
+                <td><input type="text" name="div" value="<%= demo.division%>"></td>
+            </tr>
+            <tr>
+                <td>Roll No</td>
+                <td><input type="text" name="roll_no" value="<%= demo.roll_no%>"></td>
+            </tr>
+            <tr>
+                <td>Sub1</td>
+                <td><input type="text" name="sub1" value="<%= demo.sub1%>"></td>
+            </tr>
+            <tr>
+                <td>Sub2</td>
+                <td><input type="text" name="sub2" value="<%= demo.sub2%>"></td>
+            </tr>
+            <tr>
+                <td>Sub3</td>
+                <td><input type="text" name="sub3" value="<%= demo.sub3%>"></td>
+            </tr>
+            <tr>
+                <td>Sub4</td>
+                <td><input type="text" name="sub4" value="<%= demo.sub4%>"></td>
+            </tr>
+            <tr>
+                <td>Sub5</td>
+                <td><input type="text" name="sub5" value="<%= demo.sub5%>"></td>
+            </tr>
+            <tr>
+                <td>Total</td>
+                <td><input type="text" name="total" value="<%= demo.total%>"></td>
+            </tr>
+            <tr>
+                <td>Average</td>
+                <td><input type="text" name="average" value="<%= demo.average%>"></td>
+            </tr>
+            <tr>
+                <td>Result</td>
+                <td><input type="text" name="result" value="<%= demo.result%>"></td>
+            </tr>
+            <tr align="center">
+                <td colspan="2"><input type="submit" value="Update" name="save"></td>
+            </tr>
+        </table>
+    </form>
+    
+    <% }); %>

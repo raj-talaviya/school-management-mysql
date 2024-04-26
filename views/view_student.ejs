@@ -1,0 +1,51 @@
+<style>
+    h1{
+        text-align: center;
+    }
+    body{
+        text-align: center;
+    }
+    a{
+        text-decoration: none;
+        color: blue;
+        font-size: 18px;
+    }
+</style>
+<a href="viewstudentstddiv" >View Student Div And Std</a><br>
+<h1>View Student</h1><br>
+<table border="" align="center">
+    <th>Id</th>
+    <th>Name</th>
+    <th>Std</th>
+    <th>Div</th>
+    <th>Roll No.</th>
+    <th>Add Result</th>
+    <th>Update</th>
+
+    <% result.forEach(function(user){ %>
+        <tr align="center">
+            <td>
+                <%=user.id%>
+            </td>
+            <td>
+                <%=user.name%>
+            </td>
+            <td>
+                <%=user.std%>
+            </td>
+            <td>
+                <%=user.division%>
+            </td>
+            <td>
+                <%=user.roll_no%>
+            </td>
+            <td>
+                <a href="/addresult/<%=user.id%>">Add Result</a>
+            </td>
+            <td>
+                <a href="/update2/<%=user.id%>">Update</a>
+            </td>
+        </tr>
+        <% }); %>
+</table>
+

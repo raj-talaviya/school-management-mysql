@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Staff</title>
+    <style>
+        .header {
+            display: flex;
+            justify-content: center;
+        }
+
+        .nav a {
+            margin: 20px;
+        }
+
+        a {
+            text-decoration: none;
+            color: blue;
+            font-size: 18px;
+        }
+
+        input {
+            margin: 5px 0px;
+        }
+        h1{
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <div class="nav">
+            <a href="addstaff">Add Staff</a>
+            <a href="addstudent">Add Student</a>
+            <a href="viewstudent">View Student</a>
+            <a href="viewresult">View Result</a>
+            <a href="viewstudentstddiv">View Student Div And Std</a>
+            <a href="addstd">Add Std</a>
+            <a href="adddiv">Add Div</a>
+        </div>
+    </div>
+</body>
+<br><h1>View Staff</h1><br>
+</html>
+<br>
+<table border="" align="center">
+    <th>Id</th>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Password</th>
+    <th>Update</th>
+
+    <% result.forEach(function(user){ %>
+        <tr align="center">
+            <td>
+                <%=user.id%>
+            </td>
+            <td>
+                <%=user.name%>
+            </td>
+            <td>
+                <%=user.email%>
+            </td>
+            <td>
+                <%=user.password%>
+            </td>
+            <td><a href="/update/<%= user.id %>">update</a></td>
+        </tr>
+        <% }); %>
+</table>

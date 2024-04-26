@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Dashboard</title>
+    <style>
+        .header{
+            display: flex;
+            justify-content: center;
+        }
+        h1{
+            text-align: center;
+        }
+        .nav a{
+            margin: 20px;
+        }
+
+        a{
+            text-decoration: none;
+            color: blue;
+            font-size: 18px;
+        }
+
+        input{
+            margin: 5px 0px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Welcome to <%= admin_name %></h1>
+    <div class="header">
+        
+        <div class="nav">
+            <a href="addstaff">Add Staff</a>
+            <a href="addstudent">Add Student</a>
+            <a href="viewstaff">View Staff</a>
+            <a href="viewstudent">View Student</a>
+            <a href="viewstudentstddiv">View Student Div And Std</a>
+            <a href="addstd">Add Std</a>
+            <a href="adddiv">Add Div</a>
+        </div>
+    </div>
+    <br><a href="/logout">Logout</a>
+</body>
+
+</html>

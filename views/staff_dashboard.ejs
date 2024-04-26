@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Staff Dashboard</title>
+    <style>
+        .header{
+            display: flex;
+            justify-content: center;
+        }
+        h1{
+            text-align: center;
+        }
+        .nav a{
+            margin: 20px;
+        }
+
+        a{
+            text-decoration: none;
+            color: blue;
+            font-size: 18px;
+        }
+
+        input{
+            margin: 5px 0px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Welcome to <%= staff_name %></h1>
+    <div class="header">
+        <div class="nav">
+            <a href="viewstudent">View Student</a>
+            <a href="manageresult">Manage Result</a>
+        </div>
+    </div>
+    <a href="/staff_logout">Logout</a>
+</body>
+
+</html>
