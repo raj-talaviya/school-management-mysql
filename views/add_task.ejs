@@ -1,0 +1,26 @@
+<a href="adduser">Add user</a><br>
+<a href="viewtask">View task</a><br>
+<a href="index">View user</a><br>
+
+<form method="post">
+    <table>
+        <tr>
+            <td>Task Name:</td>
+            <td><input type="text" name="task_name"></td>
+        </tr>
+        <tr>
+            <td>Select Employee:</td>
+            <td>
+                <select name="user_name">
+                    <option disabled selected>Select User</option>
+                    <% result.forEach(function(user) {%>
+                    <option value="<%= user.name %>"><%= user.name%></option>
+                    <% }); %>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td><input type="submit" value="save" name="submit"></td>
+        </tr>
+    </table>
+</form>

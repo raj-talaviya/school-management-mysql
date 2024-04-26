@@ -1,0 +1,34 @@
+<a href="adduser">Add user</a><br>
+<a href="addtask">Add task</a><br>
+<a href="index">View user</a><br>
+
+<table border="">
+    <tr>
+        <th>ID</th>
+        <th>Task</th>
+        <th>User Name</th>
+        <th>Status</th>
+    </tr>
+
+    <% result.forEach(function(task){ %>
+        <tr>
+            <td><%= task.id %></td>
+            <td><%= task.task_name %></td>
+            <td><%= task.task_user %></td>
+            <td>
+                <% if (task.status==Pending) { %>
+                    <b>Pending</b>
+                <% }else if(task.status==Accept) { %>
+                    <b>Accept</b>
+                <% }else if(task.status==Decline) { %>
+                    <b>Decline</b>
+                <% }else if(task.status==Running) { %>
+                    <b>Running</b>
+                <% }else if(task.status==Completed) { %>
+                    <b>Completed</b>
+                <% } %>
+            </td>
+        </tr>
+    <% }) %>
+
+</table>

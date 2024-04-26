@@ -1,0 +1,24 @@
+<a href="dashboard">Dashboard</a><br>
+<a href="adduser">Add user</a><br>
+<a href="addtask">Add task</a><br>
+<a href="viewtask">View task</a><br>
+
+<table border="">
+    <th>Id</th>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Password</th>
+    <th>Update</th>
+    <th>Delete</th>
+
+    <% result.forEach(function(user){ %>
+        <tr>
+            <td><%=user.id%></td>
+            <td><%=user.name%></td>
+            <td><%=user.email%></td>
+            <td><%=user.password%></td>
+            <td><a href="update/<%= user.id%>">update</a></td>
+            <td><a href="delete/<%= user.id%>">delete</a></td>
+        </tr>
+      <% }); %>
+</table>

@@ -1,0 +1,24 @@
+<% result.forEach(function(user){ %>
+
+    <form method="post">
+        <table>
+            <tr>
+                <td>Name:</td>
+                <td><input type="text" name="name" value="<%=user.name%>"></td>
+            </tr>
+    
+            <tr>
+                <td>email:</td>
+                <td><input type="email" name="email" value="<%=user.email%>"></td>
+            </tr>
+            <tr>
+                <td>password:</td>
+                <td><input type="password" name="password" value="<%=user.password%>"></td>
+            </tr>
+            <tr>
+                <td><input type="submit" value="update" name="save"></td>
+            </tr>
+        </table>
+    </form>
+    
+    <% }); %>

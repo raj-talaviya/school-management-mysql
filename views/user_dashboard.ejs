@@ -1,0 +1,29 @@
+<h1>Welcome to <%= user_name%></h1>
+
+<table border="">
+    <tr>
+        <th>ID</th>
+        <th>Task</th>
+        <th>User Name</th>
+        <th>Accept</th>
+        <th>Decline</th>
+        <th>Running</th>
+        <th>Completd</th>
+
+    </tr>
+
+    <% result.forEach(function(task){ %>
+        <tr>
+            <td><%= task.id %></td>
+            <td><%= task.task_name %></td>
+            <td><%= task.task_user %></td>
+            <td><a href="updatestatus/Accept/<%= task.id %>">Accept</a></td>
+            <td><a href="updatestatus/Decline/<%= task.id %>">Decline</a></td>
+            <td><a href="updatestatus/Running/<%= task.id %>">Running</a></td>
+            <td><a href="updatestatus/Completed/<%= task.id %>">Completed</a></td>
+        </tr>
+    <% }) %>
+
+</table>
+<br><br>
+<a href="/user_logout">Logout</a>
