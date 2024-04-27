@@ -1,0 +1,36 @@
+<style>
+    h1{
+        text-align: center;
+    }
+</style>
+<h1>View Student Std And Div</h1><br>
+<form method="post">
+    <table align="center" border="1">
+        <tr>
+            <td>Std:</td>
+            <td>
+                <select name="std">
+                    <option disabled selected>Select Standard</option>
+                    <% result.forEach(function(user) {%>
+                    <option value="<%= user.std %>"><%= user.std%></option>
+                    <% }); %>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>Div:</td>
+            <td>
+                <select name="div">
+                    <option disabled selected>Select Division</option>
+                    <% result.forEach(function(user) {%>
+                    <option value="<%= user.division %>"><%= user.division%></option>
+                    <% }); %>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="submit" value="save"></td>
+        </tr>    
+    </table>
+</form>

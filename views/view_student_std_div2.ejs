@@ -1,0 +1,25 @@
+<style>
+    h1{
+        text-align: center;
+    }
+</style>
+<h1>View Student Std And Div</h1><br>
+<table align="center" border="1">
+    <th>Id</th>
+    <th>Name</th>
+    <th>Std</th>
+    <th>Div</th>
+    <th>Roll No</th>
+    <th>Add Result</th>
+    
+    <% result.forEach(function(demo) { %>
+        <tr align="center">
+            <th><%=demo.id%></th>
+            <th><%=demo.name%></th>
+            <th><%=demo.std%></th>
+            <th><%=demo.division%></th>
+            <th><%=demo.roll_no%></th>
+            <th><a href="/addresult/<%=demo.id%>">Add Result</a></th>
+        </tr>
+    <% }); %>    
+</table>

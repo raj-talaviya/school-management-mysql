@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Student Result</title>
+    <style>
+        .header {
+            display: flex;
+            justify-content: center;
+        }
+
+        .nav a {
+            margin: 20px;
+        }
+
+        a {
+            text-decoration: none;
+            color: blue;
+            font-size: 18px;
+        }
+
+        input {
+            margin: 5px 0px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <div class="nav">
+            <a href="staff_dashboard">Dashboard</a>
+            <a href="viewstudent">View Student</a>
+        </div>
+    </div>
+</body>
+<br>
+<table border="1" align="center">
+    <th>No</th>
+    <th>Name</th>
+    <th>Std</th>
+    <th>Div</th>
+    <th>Roll No</th>
+    <th>Sub1</th>
+    <th>Sub2</th>
+    <th>Sub3</th>
+    <th>Sub4</th>
+    <th>Sub5</th>
+    <th>total</th>
+    <th>Average</th>
+    <th>Result</th>
+    <th>Update</th>
+
+    <% result.forEach(function(demo) { %>
+
+        <tr>
+            <th>
+                <%= demo.id%>
+            </th>
+            <th>
+                <%= demo.name%>
+            </th>
+            <th>
+                <%= demo.std%>
+            </th>
+            <th>
+                <%= demo.division%>
+            </th>
+            <th>
+                <%= demo.roll_no%>
+            </th>
+            <th>
+                <%= demo.sub1%>
+            </th>
+            <th>
+                <%= demo.sub2%>
+            </th>
+            <th>
+                <%= demo.sub3%>
+            </th>
+            <th>
+                <%= demo.sub4%>
+            </th>
+            <th>
+                <%= demo.sub5%>
+            </th>
+            <th>
+                <%= demo.total%>
+            </th>
+            <th>
+                <%= demo.average%>
+            </th>
+            <th>
+                <%= demo.result%>
+            </th>
+            <th><a href="/update1/<%= demo.id %>">Update</a></th>
+        </tr>
+
+        <% }); %>
+</table>
