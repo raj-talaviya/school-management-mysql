@@ -91,7 +91,7 @@ module.exports = {
         res.redirect("/staff_login");
     },
 
-    staff: function(req,res){
+    staffa: function(req,res){
         res.render("add_staff");
     },
 

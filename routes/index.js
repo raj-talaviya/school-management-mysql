@@ -29,7 +29,7 @@ router.get("/staff_logout",homeController.stafflogout)
 router.get('/staff_dashboard',homeController.staffdashboard)
 
 //Add Staff
-router.get('/addstaff',homeController.staff)
+router.get('/addstaff',homeController.staffa)
  
 router.post('/addstaff',homeController.addStaff)
 
