@@ -4,68 +4,29 @@ const express = require('express')
 const router = express.Router()
 const homeController = require('../controller/homeController')
 
-router.post('/', homeController.index)
-
-
-
 var staff_name="";
 var admin_name="";
+
+//school login
+router.post('/', homeController.index)
 
 // School Dashboard
 router.get('/school_dashboard', homeController.schoolDashbaord)
 
 //School Logout
-router.get("/logout",function(req,res){
-    admin_name="";
-    res.redirect("/");
-})
+router.get("/logout",homeController.logout)
 
 //Staff Login
-router.get('/staff_login',function(req,res){
-    res.render("staff_login");
-})
+router.get('/login',homeController.stafflogin)
 
-router.post('/staff_login',function(req,res){
-     
-    var email= req.body.email;
-    var password = req.body.password;
-
-    if(email && password){
-        var login_query= "select * from staff where email='"+email+"' and password='"+password+"'"
-        con.query(login_query,function(error,result,field){
-            if(error) throw error;
-
-            if(result.length>0){
-                staff_name = result[0].name;
-                res.redirect('/staff_dashboard');
-            }
-            else
-            {
-                res.redirect('/staff_login');
-            }    
-        })
-    }
-    else{
-        res.send("Plzz Enter Valid Email And Password..!");
-    }    
-})
+//staff
+router.post('/staff_login',homeController.staff)
 
 //Staff Logout
-router.get("/staff_logout",function(req,res){
-    staff_name="";
-    res.redirect("/staff_login");
-})
+router.get("/staff_logout",homeController.stafflogout)
 
 //Staff Dashboard
-router.get('/staff_dashboard', function (req, res){
-    if(staff_name == "")
-    {
-        res.redirect('/staff_login')
-    }
-    else{
-        res.render("staff_dashboard", { staff_name})
-    }
-})
+router.get('/staff_dashboard',homeController.staffdashboard)
 
 //Add Staff
 router.get('/addstaff',function(req,res){

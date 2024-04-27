@@ -17,7 +17,6 @@ var con = mysql.createConnection({
 
 con.connect();
 
-
 //School Login
 app.get('/',function(req,res){
     res.render("school_login");
